@@ -7,8 +7,8 @@ class Tower
 public:
     Tower(QPoint pos,int n,const QPixmap &sprite=QPixmap("E:/gameone/tower4.gif"));
 QPoint m_pos;
-    void draw(QPainter *painter) const;
-    QLabel *label;
+    void draw(QLabel **towerlabel,QMovie *pic) const;
+
    int no;
 private:
 

@@ -8,6 +8,9 @@ Tower::Tower(QPoint pos,int n, const QPixmap &sprite):m_pos(pos),m_sprite(sprite
 
     no=n;
 }
-void Tower::draw(QPainter *painter) const{
-painter->drawPixmap(this->m_pos.x()-20,this->m_pos.y()-75,this->m_sprite);
+void Tower::draw(QLabel **towerlabel,QMovie *pic) const{
+towerlabel[no]->setGeometry(m_pos.x()-20,m_pos.y()-75,50,84);
+towerlabel[no]->setScaledContents(true);
+towerlabel[no]->setMovie(pic);
+pic->start();
 }
